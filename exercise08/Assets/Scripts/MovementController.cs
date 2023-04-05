@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
         if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
         {
             gm.selectedCar.transform.Translate(0f, 0f, 1f);
+          
         }
 
     }
@@ -27,6 +28,7 @@ public class MovementController : MonoBehaviour
         if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
         {
             gm.selectedCar.transform.Translate(0f, 0f, -1f);
+           
         }
     }
     public void MoveLeft()
@@ -34,6 +36,7 @@ public class MovementController : MonoBehaviour
         if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
         {
             gm.selectedCar.transform.Translate(0f, 0f, -1f);
+            
         }
     }
     public void MoveRight()
@@ -41,6 +44,7 @@ public class MovementController : MonoBehaviour
         if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
         {
             gm.selectedCar.transform.Translate(0f, 0f, 1f);
+           
         }
     }
 }

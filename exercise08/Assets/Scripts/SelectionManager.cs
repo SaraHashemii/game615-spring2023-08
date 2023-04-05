@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SelectionManager : MonoBehaviour
 {
     GameManager gm;
@@ -56,6 +57,7 @@ public class SelectionManager : MonoBehaviour
         selected = true;
         carRenderer.material.color = selectedColor;
         gm.selectedCar = this;
+      
 
 
 
