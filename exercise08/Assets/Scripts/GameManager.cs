@@ -8,14 +8,15 @@ public class GameManager : MonoBehaviour
 {
 
     public SelectionManager selectedCar;
-    public MovementController movement;
-    
-
+    [SerializeField] GameObject winPos;
+    [SerializeField] GameObject taxi;
+    [SerializeField] GameObject winText;
+    [SerializeField] Animator animUI;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        winText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,11 +38,17 @@ public class GameManager : MonoBehaviour
         }
 
 
+        if (taxi.transform.position.z >= winPos.transform.position.z)
+        {
 
-       
+            animUI.SetBool("WinPos", true);
+            winText.SetActive(true);
+
+        }
+
     }
 
-    
-    
+
+
 
 }
