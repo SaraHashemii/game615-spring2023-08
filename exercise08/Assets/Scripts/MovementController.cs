@@ -4,20 +4,43 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-   public void MoveUp()
+    GameManager gm;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        transform.Translate(0f, 0f, 1f);
+        GameObject gmObj = GameObject.Find("GameManager");
+        gm = gmObj.GetComponent<GameManager>();
+    }
+
+
+    public void MoveUp()
+    {
+        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
+        {
+            gm.selectedCar.transform.Translate(0f, 0f, 1f);
+        }
+
     }
     public void MoveDown()
     {
-        transform.Translate(0f, 0f, -1f);
+        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
+        {
+            gm.selectedCar.transform.Translate(0f, 0f, -1f);
+        }
     }
     public void MoveLeft()
     {
-        transform.Translate(-1f, 0f, 0f);
+        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
+        {
+            gm.selectedCar.transform.Translate(0f, 0f, -1f);
+        }
     }
     public void MoveRight()
     {
-        transform.Translate(1f, 0f, 0f);
+        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
+        {
+            gm.selectedCar.transform.Translate(0f, 0f, 1f);
+        }
     }
 }

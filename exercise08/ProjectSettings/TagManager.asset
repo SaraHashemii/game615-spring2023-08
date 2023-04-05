@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Selectable
+  - Vertical
+  - Horizontal
   layers:
   - Default
   - TransparentFX

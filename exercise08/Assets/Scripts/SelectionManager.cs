@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectionManager : MonoBehaviour
 {
     GameManager gm;
+    MovementController move;
     public Renderer carRenderer;
     public Color hoverColor;
     public Color selectedColor = Color.magenta;
@@ -47,11 +48,11 @@ public class SelectionManager : MonoBehaviour
     {
         if (gm.selectedCar != null)
         {
-  
+
             gm.selectedCar.selected = false;
             gm.selectedCar.carRenderer.material.color = gm.selectedCar.defaultColor;
         }
-        
+
         selected = true;
         carRenderer.material.color = selectedColor;
         gm.selectedCar = this;
