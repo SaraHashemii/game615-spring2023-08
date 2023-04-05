@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-
+    GameManager gm;
     public Renderer carRenderer;
     public Color hoverColor;
-    public Color SelectedColor;
+    public Color selectedColor = Color.magenta;
     public Color defaultColor;
 
     public bool selected = false;
@@ -16,6 +16,9 @@ public class SelectionManager : MonoBehaviour
     void Start()
     {
         defaultColor = carRenderer.material.color;
+
+        GameObject gmObj = GameObject.Find("GameManager");
+        gm = gmObj.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -39,4 +42,23 @@ public class SelectionManager : MonoBehaviour
             carRenderer.material.color = defaultColor;
         }
     }
+
+    private void OnMouseDown()
+    {
+        if (gm.selectedCar != null)
+        {
+  
+            gm.selectedCar.selected = false;
+            gm.selectedCar.carRenderer.material.color = gm.selectedCar.defaultColor;
+        }
+        
+        selected = true;
+        carRenderer.material.color = selectedColor;
+        gm.selectedCar = this;
+
+
+
+
+    }
+
 }
