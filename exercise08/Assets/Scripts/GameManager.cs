@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public SelectionManager selectedCar;
+    public bool canMove;
     [SerializeField] GameObject winPos;
     [SerializeField] GameObject taxi;
     [SerializeField] GameObject winText;

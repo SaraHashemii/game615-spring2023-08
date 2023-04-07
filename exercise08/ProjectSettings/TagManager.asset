@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Ground
   - Selectable
-  - Vertical
-  - Horizontal
+  - hasCollider
+  - Selected
   layers:
   - Default
   - TransparentFX

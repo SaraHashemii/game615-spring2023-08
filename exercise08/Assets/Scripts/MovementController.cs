@@ -6,6 +6,8 @@ public class MovementController : MonoBehaviour
 {
     GameManager gm;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,37 +16,41 @@ public class MovementController : MonoBehaviour
     }
 
 
-    public void MoveUp()
+    public void MoveForward()
     {
-        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
+        if (gm.selectedCar != null && gm.selectedCar.tag == "Selected")
         {
-            gm.selectedCar.transform.Translate(0f, 0f, 1f);
-          
+            if (gm.canMove)
+            {
+                gm.selectedCar.transform.Translate(0f, 0f, 1f);
+            }
         }
+    }
 
-    }
-    public void MoveDown()
+    public void MoveBackward()
     {
-        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Vertical"))
+        if (gm.selectedCar != null)
         {
-            gm.selectedCar.transform.Translate(0f, 0f, -1f);
-           
+            if (gm.canMove)
+            {
+                gm.selectedCar.transform.Translate(0f, 0f, -1f);
+            }
         }
     }
-    public void MoveLeft()
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
+        if (collision.gameObject.tag == "hasCollider")
         {
-            gm.selectedCar.transform.Translate(0f, 0f, -1f);
-            
+            gm.canMove = false;
         }
     }
-    public void MoveRight()
+
+    private void OnCollisionExit(Collision collision)
     {
-        if (gm.selectedCar != null && gm.selectedCar.CompareTag("Horizontal"))
+        if (collision.gameObject.tag == "hasCollider")
         {
-            gm.selectedCar.transform.Translate(0f, 0f, 1f);
-           
+            gm.canMove = true;
         }
     }
 }
