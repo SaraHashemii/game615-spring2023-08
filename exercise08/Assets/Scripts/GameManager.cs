@@ -42,14 +42,19 @@ public class GameManager : MonoBehaviour
         if (taxi.transform.position.z >= winPos.transform.position.z)
         {
 
+            selectedCar.selected = false;
             animUI.SetBool("WinPos", true);
-            winText.SetActive(true);
+            Invoke("showWinText", 2f);
+
 
         }
 
     }
 
 
-
+    public void showWinText()
+    {
+        winText.SetActive(true);
+    }
 
 }

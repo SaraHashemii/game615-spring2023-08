@@ -74,11 +74,7 @@ public class SelectionManager : MonoBehaviour
         }
         gm.canMove = true;
 
-
-
-
-
-
     }
+
 
 }
