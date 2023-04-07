@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
         {
 
             selectedCar.selected = false;
+            selectedCar.carRenderer.material.color = selectedCar.defaultColor;
+            canMove = false;
             animUI.SetBool("WinPos", true);
             Invoke("showWinText", 2f);
 
