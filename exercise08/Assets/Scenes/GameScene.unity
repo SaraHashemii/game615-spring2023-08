@@ -4504,6 +4504,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9112871140665499851, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112871140665499851, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112871140665499860, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112871141077524305, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112871141077524305, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112871141077524306, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.35
+      objectReference: {fileID: 0}
     - target: {fileID: 9112871141171885397, guid: 4049f7db1969943dd809544fafd1acb2, type: 3}
       propertyPath: m_RootOrder
       value: 6
